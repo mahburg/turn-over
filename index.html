@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <title>Turn-over</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+</head>
+
+<body ng-controller="mainCtrl">
+    <header>
+        <h1 class="title">Turn-over</h1>
+    </header>
+    <div class="game_table">
+        <div class="player2">
+            <div>
+                <div class="card"><img ng-src="cards/{{player2[0]}}.svg" alt=""></div>
+                <div class="card"><img ng-src="cards/{{player2[1]}}.svg" alt=""></div>
+                </div>
+                <div>
+                <div class="card"><img ng-src="cards/{{player2[2]}}.svg" alt=""></div>
+                <div class="card"><img ng-src="cards/{{player2[3]}}.svg" alt=""></div>
+                </div>
+                <div>
+                <div class="card"><img ng-src="cards/{{player2[4]}}.svg" alt=""></div>
+                <div class="card"><img ng-src="cards/{{player2[5]}}.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="draw">
+            <!--{{deckLen}}-->
+            <img class="card" src="cards/back.svg" alt="">
+
+        </div>
+
+        <div class="player1">
+            <div>
+                <div class="card"><img ng-src="cards/{{player1[0]}}.svg" alt=""></div>
+                <div class="card"><img ng-src="cards/{{player1[1]}}.svg" alt=""></div>
+            </div>
+            <div>
+                <div class="card"><img ng-src="cards/{{player1[2]}}.svg" alt=""></div>
+                <div class="card"><img ng-src="cards/{{player1[3]}}.svg" alt=""></div>
+            </div>
+            <div>
+                <div class="card"><img ng-src="cards/{{player1[4]}}.svg" alt=""></div>
+                <div class="card"><img ng-src="cards/{{player1[5]}}.svg" alt=""></div>
+            </div>
+
+        </div>
+
+        <!--<div ng-repeat="card in deck">
+            {{card}}
+            <img src="cards/{{card}}.svg" alt="">
+        </div>-->
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/routes/mainCtrl.js"></script>
+    <script src="./app/routes/mainSrv.js"></script>
+</body>
+
+</html>
