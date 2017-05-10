@@ -12,6 +12,8 @@ angular.module('app').service('mainSrv', function () {
         }
         return shuffPack;
     }
+
+    
     this.getDeck = function () {
         return unshuffled;
     }
@@ -22,7 +24,8 @@ angular.module('app').service('mainSrv', function () {
     this.shufflePack = function (pack) {
         return shuffle(pack);
     }
-    this.draw = function (arr, n) {
+    
+    this.drawN = function (arr, n) {
         if (!n) {
             n = 1;
         }
@@ -30,9 +33,17 @@ angular.module('app').service('mainSrv', function () {
             return -1;
         }
         let drawPack = [];
-        for (let i = 0; i <= n; i++){
+        for (let i = 0; i < n; i++){
             drawPack.push(arr.pop());
         }
         return drawPack;
     }
+
+    this.draw = function (deck) {
+        return deck.pop();
+    }
+    //flip card
+    //draw/discard/exchange
+    //score hand
+    //match card flip
 })
